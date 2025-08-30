@@ -170,4 +170,4 @@ with gr.Blocks(css=".gr-input-container input {display: none;}") as demo:
 
     btn.click(fn=evaluar, inputs=[func, est], outputs=[out1, out2, detalle_box])
 
-demo.launch(share=True)
+demo.launch()
