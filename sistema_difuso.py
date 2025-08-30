@@ -158,14 +158,12 @@ with gr.Blocks(css=".gr-input-container input {display: none;}") as demo:
     gr.Markdown("Evalúa el cumplimiento de un proyecto de software según su estética y funcionalidades desarrolladas.")
 
     with gr.Row():
-        # Columna izquierda (inputs + botón + detalle)
         with gr.Column(scale=1):
             func = gr.Slider(0, 10, step=0.1, label="Funcionalidad Desarrollada")
             est  = gr.Slider(0, 10, step=0.1, label="Estética de la App")
             btn = gr.Button("Evaluar")
             detalle_box = gr.Textbox(label="Cálculo detallado", lines=15)
 
-        # Columna derecha (outputs principales)
         with gr.Column(scale=2):
             out1 = gr.Textbox(label="Resultado")
             out2 = gr.Plot(label="Proyecto Cumplido")
